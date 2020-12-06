@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="prob_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5d124e77-c58e-41aa-9f61-a41781260b63key&lang=en_US" type="text/javascript">
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="http://pngimg.com/uploads/hourglass/hourglass_PNG13.png" onclick="window.location.reload()"></div>
+        <div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+        </div>
+        <div class="main-nav">
+            <ul>
+                <li><a href="#section1">HOME</a></li>
+                <li><a href="#section2" onclick="change2()">TIME TO</a>
+                <li><a href="#section4" onclick="change()">ABOUT US</a></li>
+                <li><a href="#section5">CONTACT</a></li>
+            </ul>
+            <div class="profile">
+                <img id="img" title = "Name" src="https://tec-sense.com/wp-content/uploads/2019/09/avtar-man.png" alt="">
+            </div>
+            
+        </div>
+    </header>
+
+    <nav id="section1">
+        <video id="myVideo" autoplay muted loop >
+            <source src="bg1.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+            <div class="main_text">
+                <h5>FREE COURSE OF DEVELOPMENT</h5>
+                <h2>IT'S <em>TIME</em> TO</h2>
+            </div>
+            <button class="main-button" onclick="show()" id="btn">JOIN</button>
+        </div>
+    </nav>
+
+   <div class="screen">
+        <div class="screen_content">
+            <img onclick="close_screen()" class="sign" src="icon.png" alt="">
+            <div class="text">
+                <strong><em>TIME</em> TO</strong>
+            </div>
+                
+             <form class="login-form" id="same">
+                <input type="text" placeholder="username" name="username"/>
+                <input type="password" placeholder="password" name="pass"/>
+                <button onclick="login(username.value)">login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+            <form class="register-form" id="same">
+                <input type="text" placeholder="name"/>
+                <input type="password" placeholder="password"/>
+                <input type="text" placeholder="email address"/>
+                <button>create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+    <section class="items" id="section2">
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="https://www.scuba-monkey.com/wp-content/uploads/2015/04/planning-graphic.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">PLAN</h4>
+                  <h6 class="card-text">An idiot with a plan can beat a genius without a plan</h6>
+                  <a class="btn btn-outline-secondary" href="#section3">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="https://i.pinimg.com/originals/48/e7/32/48e732005b1dc9302ae443ced9d4a341.png" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">START</h4>
+                  <h6 class="card-text">The secret to getting ahead is getting started.</h6>
+                  <a  class="btn btn-outline-secondary" href="#section3">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="https://logosrated.net/wp-content/uploads/parser/Challenge-Logo-1.png" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">CHALLENGE</h4>
+                  <h6 class="card-text">The key to failure is trying to please everybody</h6>
+                  <a class="btn btn-outline-secondary" href="#section3">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <img class="card-img-top" src="https://miro.medium.com/max/3828/1*pYwSyihmU20SBdWevafO8Q.jpeg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">GROWTH</h4>
+                  <h6 class="card-text">One can choose to go back toward safety or forward toward growth</h6>
+                  <a class="btn btn-outline-secondary" href="#section3">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="learn" id="section3">
+            <div class="col-md-6 align-self-center">
+                <div class="left-content">
+                    <h4>Watch the video to learn more <em>about TIME TO...</em></h4>
+                    <p>It’s easy to have FAITH everything is going to work out, when everything IS working out.
+                    It’s much harder to have faith when you are facing challenges in your life. But that is exactly when you need to apply your faith.
+                    Because faith is believing in the unseen. Faith is taking the first step. Faith is jumping in the deep end and KNOWING everything will be OK. 
+                    <br><br>“I hated every minute of training, but I said, ‘Don’t quit. Suffer now and live the rest of your life a champion.” ~ Muhammad Ali</p>
+                </div>
+            </div>
+            <div class="col col-md-15 offset-md-4 col-lg-7 offset-lg-0">
+                    <div id="carousel-example" class="carousel slide">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example" data-slide-to="1"></li>
+                            <li data-target="#carousel-example" data-slide-to="2"></li>
+                            <li data-target="#carousel-example" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/py1JFnpLJoI" 
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-icQWPBBPZE" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E71APyXDW5w" allowfullscreen></iframe>
+                                 </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lkDBImBAmN0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <article id="section4">
+        <div class="txt">
+            <h2 id="tag1">WE ARE <em>CHAMPIONS!</em></h2>
+            <h3 id="tag2">be with us in the same wave.</h3>
+        </div>
+        <div class="image">
+            <img src="http://pngimg.com/uploads/sea/sea_PNG16.png" class="moun">
+            <img src="http://pngimg.com/uploads/sea/sea_PNG16.png" class="moun1">
+        </div>
+        <div class="icons">
+            <img src="http://pngimg.com/uploads/instagram/instagram_PNG9.png" title="@timeto" class="icon">
+            <img src="http://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19754.png" title="Kuanyshbekov Yermakhan" class="icon">
+            <img src="http://pngimg.com/uploads/telegram/telegram_PNG33.png" title="timeto" class="icon">
+            <img src="http://pngimg.com/uploads/twitter/twitter_PNG28.png" title="@timeto" class="icon"> 
+        </div>
+    </article>
+    <footer class="contact" id="section5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">         
+                    <form id="contact">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6">
+                                <fieldset>
+                                    <input name="email" type="text" class="form-control" id="email" placeholder="Your Email" required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="button">Send Message Now</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div id="Mymap" style="width: 550px; height: 420px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="prob.js"></script>
+</body>
+</html>

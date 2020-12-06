@@ -1,0 +1,550 @@
+html{
+  scroll-behavior: smooth;  
+  overflow-x: hidden;  
+}
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+header {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: rgba(22,34,57,1);   
+    padding: 4px;
+    position: fixed;  
+    width: 100%;
+    z-index: 12;
+}
+.logo{
+  float: left;
+  padding-left: 40px;
+  cursor: pointer;
+
+}
+.main-nav {
+  height: 100%;
+}
+
+.main-nav ul {
+    display: flex;
+    margin: 0;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.main-nav li {
+    list-style: none;
+    padding: 7px;
+}
+
+.main-nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 7px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: all 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    border: 2px solid #f5a425;
+}
+
+.toggle-button {
+    position: absolute;
+    top:30px;
+    right: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.screen{
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+.screen_content{
+    background-color: rgba(22,34,57,1);
+    height: 400px;
+    width: 450px;
+    position: absolute;
+    padding: 80px;
+    text-align: center;
+    margin: 40px 200px;
+
+    
+}
+.screen h1{
+  font-weight: 500;
+  padding-top: -25px;
+}
+.screen button {
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #f5a425;
+  width: 100%;
+  border: 0;
+  margin: 13px auto;
+  padding: 13px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.screen input {
+  display: block;
+  width: 50%;
+  outline: none;
+  background-color: rgba(250,250,250,0.1);
+  width: 100%;
+  margin: 9px auto;
+  padding: 13px 10px;
+  font-size: 14px;
+  border:none;
+}
+ 
+.message {
+  margin: 20px 0 0;
+  color: white;
+  font-size: 12px;
+}
+.message a {
+  color:#f5a425;
+  text-decoration: none;
+}
+.register-form {
+  display: none;
+}
+.screen form::placeholder { color: #fff }
+.screen form input::placeholder { color: #fff; }
+.screen form input::placeholder { color: #fff; }
+.screen form input::focus{
+  
+    color: #fff;  
+}
+
+.profile{
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    border-radius: 35px;
+    display: none;
+}
+#img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline;
+}
+#user_name{
+  font-size: 30px;
+  visibility: hidden;
+}
+.sign{
+    position: absolute;
+    width: 50px;
+    height: 65px;
+    top: -25px;
+    right: -25px;
+    cursor: pointer;
+}
+img{
+  width: 75px;
+  height: 75px;
+}
+nav{
+  color: white;
+  padding: 310px;
+
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(22,34,57,0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 730px;
+}
+#myVideo{
+  position: absolute;
+  top:0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+
+}
+.main_text{
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  width: fit-content;
+}
+.main_text h5{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+.main_text h2{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+  padding: 20px;
+
+}
+.main_text h2 em{
+  font-style: normal;
+  color: #f5a425;
+}
+.main-button{
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 55%;
+  width: 120px;
+  padding:10px 20px;
+  font-size: 15px;
+  text-align: center;
+  background-color: #f5a425;
+  cursor: pointer;
+  letter-spacing: 1px;
+  outline: 0;
+  border: 0;
+  color: #FFFFFF;
+  position: absolute;
+}
+
+.text{
+  margin-top: -40px;
+  color: white;
+  font-size:40px;
+
+}
+.text em{
+  font-style: normal;
+  color: #f5a425;
+}
+
+
+.contact {
+  background-image: url(contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #172238;
+  padding-bottom: 70px;
+}
+.item{
+  text-align: center;
+}
+.items{
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 150px 119px;
+  display: flex;
+  justify-content: space-around; 
+
+}
+.card{
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+}
+
+.card-img-top{
+    height: 220px;
+    object-fit: cover;
+}
+.card-title{
+  color: black;
+}
+.card-text{
+  color: black;
+}
+
+.learn{
+  background-image: url(bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+  padding: 190px;
+  display: flex;
+}
+
+.left-content h4 {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+    margin-bottom: 20px;
+
+}
+.left-content h4 em {
+    font-style: normal;
+    color: #f5a425;
+}
+@media screen and (max-width: 1200px) {
+   .learn{
+    padding: 0;
+    display: inline-block;
+   }
+ }
+
+.top-content .carousel { box-shadow: 0 0 15px 0 #444; }
+.top-content .carousel-control-prev { left: -110px; border-bottom: 0; }
+.top-content .carousel-control-next { right: -110px; border-bottom: 0; }
+.top-content .carousel-indicators { bottom: -80px; }
+.top-content .carousel-indicators li { width: 16px; height: 16px; margin-left: 5px; margin-right: 5px; border-radius: 50%; }
+
+article{
+  background-image: url(about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 170px;
+}
+.txt{
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 5%);
+  position: relative;
+  width: fit-content;;
+}
+.txt h2{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 800;
+  color: white;
+}
+.txt h2 em{
+  font-style: normal;
+  color: #f5a425;
+}
+.txt h3{
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+.image{
+  position: relative;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%,5%);
+  display: flex;
+  width: fit-content;
+}
+.moun{
+  width: 241px;
+  height: 200px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+}
+.moun1{
+  width: 241px;
+  height: 200px;
+}
+.icons{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,300%);
+  display: flex;
+  width: fit-content;
+}
+.icon{
+  width: 40px;
+  height: 40px;
+}
+/*.contact{
+  padding:50px;
+}*/
+.contact form {
+    background-color: rgba(250,250,250,0.1);
+    padding: 30px;
+    width: 100%;
+}
+
+
+.contact form input {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(250,250,250,0.1);
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.contact form textarea {
+    width: 100%;
+    height: 220px;
+    
+    background-color: rgba(250,250,250,0.1);
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    background-color: rgba(250,250,250,0.1);
+}
+
+.contact form::placeholder { color: #fff }
+.contact form input::placeholder { color: #fff; }
+.contact form input::placeholder { color: #fff; }
+
+.contact form::placeholder { color: #fff }
+.contact form textarea::placeholder { color: #fff; }
+.contact form textarea::placeholder { color: #fff; }
+
+.contact form button {
+    background-color: #f5a425;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    padding: 12px 20px;
+    display: inline-block;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+@media (max-width: 1500px){
+  .items{
+      flex-wrap: wrap;
+    }
+  
+}
+@media (max-width: 1000px){
+  .items{
+      flex-wrap: wrap;
+    }
+    .main-button{
+      margin: 0 auto; 
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+        
+
+    }
+    .logo{
+      margin-left: -40px;
+    }
+    .toggle-button {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        width: 100%;
+    }
+
+    .main-nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        padding: 8px 16px;
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+    .items{
+      flex-wrap: wrap;
+    }
+    .main-button{
+      margin: 0 auto;
+    }
+    #img{
+      margin-right: 50px;
+    }
+    #Mymap{
+      padding:11px;
+    }
+    .moun .moun1  {
+      width: 20%;
+      margin: 0 auto;
+    }
+    .left-content{
+      margin-bottom: 45px;
+    }
+}
+
+/*create procedure insert_company2
+@companyID int, @compName varchar(50), @email varchar(50), @website varchar(50) , @phone varchar(50),@date date, @number int as insert into Company
+values(@companyID, @compName, @email, @website, @phone,@date, @number) 
+go
+
+exec insert_company1 2,'Max', 'Won' , 'fax' ,'+77774356788','11-11-2012',44;
+
+create procedure update_company2
+@companyID int, @compName varchar(50), @email varchar(50), @website varchar(50) , @phone varchar(50),@date date, @number int as update Company
+set CompanyId = @companyID,CompanyName=@compName,Email=@email, Website=@website,PhoneNumber=@phone , Date=@date, NumberOfWorkers=@number
+where CompanyId = @companyID
+go
+
+exec update_company1 2,'Maxat', 'Won' , 'fax' ,'+77774356788','11-11-2012',44;
+
+create procedure delete_company2
+@companyID int as delete from Company where CompanyId = @companyID 
+go
+
+exec delete_company2 2;*/
